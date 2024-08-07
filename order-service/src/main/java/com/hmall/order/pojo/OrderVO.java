@@ -2,10 +2,13 @@ package com.hmall.order.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class OrderVO {
     /**
      * 订单编号
@@ -60,5 +63,9 @@ public class OrderVO {
     /**
      * 订单商品明细
      */
-    private List<OrderDetail> orderDetailList;
+    private List<OrderDetailVO> orderDetailList;
+    /**
+     * 币种
+     */
+    private BigDecimal Current;
 }

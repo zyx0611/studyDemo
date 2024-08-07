@@ -1,10 +1,12 @@
 package com.hmall.order.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -65,4 +67,9 @@ public class Order{
      * 订单商品明细
      */
     private List<OrderDetail> orderDetailList;
+    /**
+     * 币种
+     */
+    @TableField(exist = false)
+    private BigDecimal Currency;
 }
